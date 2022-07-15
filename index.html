@@ -10,6 +10,13 @@
   <body>
     <a-scene id="scene">
     
+      <!--Assets-->
+      <a-assets>
+        <a-asset-item id="shooter"
+          src="./models/shooter/gun.gltf"
+        ></a-asset-item>
+      </a-assets>
+
       <!--Light-->
       <a-entity light="type: ambient; color: yellow; intensity:0.5"></a-entity>
 
@@ -21,6 +28,13 @@
         wasd-controls
         look-controls="pointerLockEnabled: false"        
       >
+        <a-entity
+          id="weapon"
+          gltf-model="#shooter"
+          position="0 -4.4 3"
+          rotation="0 180 0"
+          scale="0.35 1 1"
+        ></a-entity>
         <a-cursor></a-cursor>        
       </a-entity>
 
@@ -42,12 +56,12 @@
       </a-plane>
 
       <!--Boxes-->
-      <a-box position="-2 1.5 -10" color="tomato" depth="1" height="1" width="1"></a-box>
-      <a-box position="0 1.5 -10" color="tomato" depth="1" height="1" width="1"></a-box>
-      <a-box position="2 1.5 -10" color="tomato" depth="1" height="1" width="1"></a-box>
-      <a-box position="-1 2.5 -10" color="tomato" depth="1" height="1" width="1"></a-box>
-      <a-box position="1 2.5 -10" color="tomato" depth="1" height="1" width="1"></a-box>
-      <a-box position="0 3.5 -10" color="tomato" depth="1" height="1" width="1"></a-box>
+      <a-box position="-2 1.5 -10" color="tomato" depth="1" height="1" width="1" static-body></a-box>
+      <a-box position="0 1.5 -10" color="tomato" depth="1" height="1" width="1" static-body></a-box>
+      <a-box position="2 1.5 -10" color="tomato" depth="1" height="1" width="1" static-body></a-box>
+      <a-box position="-1 2.5 -10" color="tomato" depth="1" height="1" width="1" static-body></a-box>
+      <a-box position="1 2.5 -10" color="tomato" depth="1" height="1" width="1" static-body></a-box>
+      <a-box position="0 3.5 -10" color="tomato" depth="1" height="1" width="1" static-body></a-box>
 
     </a-scene>
   </body>
